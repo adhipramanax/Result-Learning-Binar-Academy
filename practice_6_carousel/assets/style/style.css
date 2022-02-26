@@ -1,0 +1,25 @@
+.btn-carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-control {
+  background: #5cb85f;
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.carousel button {
+  border-radius: 100%;
+  margin: 5px 15px;
+}
+
+.tombol-crsl {
+  width: 15px;
+  height: 15px;
+}

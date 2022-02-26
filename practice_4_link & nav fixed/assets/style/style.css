@@ -1,0 +1,31 @@
+.navbar {
+  position: fixed !important;
+  width: 100%;
+}
+
+.content {
+  height: 200px;
+  background-color: red;
+}
+
+#home {
+  background-color: green;
+  width: 100%;
+  height: 600px;
+  padding-top: 56px;
+}
+#library {
+  background-color: black;
+  width: 100%;
+  height: 600px;
+}
+#galery {
+  background-color: blue;
+  width: 100%;
+  height: 600px;
+}
+#about {
+  background-color: green !important;
+  width: 100%;
+  height: 600px !important;
+}

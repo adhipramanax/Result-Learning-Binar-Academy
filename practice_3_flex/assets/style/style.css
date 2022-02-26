@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  border: 5px solid purple;
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: wrap; */
+  flex-flow: column wrap;
+}
+
+.item {
+  border: 5px solid #000;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
