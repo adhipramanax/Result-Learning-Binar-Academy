@@ -45,7 +45,7 @@ console.log(varA)
 // ////////////////////////////////////////////////////////////////////////////////
 
 // const tidak dapat di assign
-// let tidak daapat redeklarasi variable
+// let tidak daapat redeklarasi variable (hoisting)
 // var dapat redeklarasi variable
 
 var variableA
