@@ -1,3 +1,5 @@
+//Materi tentang squens, selection, repetition
+
 // Deklarasi variable
 var a = "Teh", b = "Jus", c;
 
@@ -47,23 +49,24 @@ if (jomblo == 1) {
     console.log("saya tidak berstatus");}
 
     // algoritma lain
-
-    // if (jomblo == 1) {
-    //     console.log("saya Jomblo jadi");
-    //     kondisi = "saya tidak malming"
-    //     if (kondisi == "saya tidak malming") {
-    //         console.log(kondisi);
-    //         kondisi="saya nonton netflix";
-    //         console.log("dan", kondisi);
-    //     }
-    // } else if (jomblo == 0) {
-    //     console.log("saya tidak jomblo jadi");
-    //     kondisi = "saya pergi ke taman lalulintas";
-    //     console.log(kondisi, "ahhaha");
-    // }
-    // else {
-    //     console.log("saya tidak berstatus");
-    // }
+    
+var kondisia;
+if (jomblo == 1) {
+    console.log("saya Jomblo jadi");
+    kondisia = "saya tidak malming"
+    if (kondisia == "saya tidak malming") {
+        console.log(kondisia);
+        kondisia="saya nonton netflix";
+        console.log("dan", kondisia);
+    }
+} else if (jomblo == 0) {
+    console.log("saya tidak jomblo jadi");
+    kondisia = "saya pergi ke taman lalulintas";
+    console.log(kondisia, "ahhaha");
+}
+else {
+    console.log("saya tidak berstatus");
+}
 
 
 // //////////////////////////////////////////////////////////////////////////////
@@ -109,7 +112,3 @@ let mobil = {
 console.log(mobil.ban);
 console.log("merk");
 
-
-// squens
-// selection 
-// repetition
