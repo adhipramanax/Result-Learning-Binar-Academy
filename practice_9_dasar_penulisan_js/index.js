@@ -1,4 +1,3 @@
-
 // Deklarasi variable
 var a = "Teh", b = "Jus", c;
 
@@ -17,8 +16,7 @@ console.log(a, b, c)
 
 // //////////////////////////////////////////////////////////////////////////////
 
-
-// menukar dengan nilai dengan 2 variable
+// menukar nilai hanya dengan 2 variable
 var d = 5, e = 10;
 console.log(d, e);
 
@@ -37,9 +35,9 @@ var jomblo = 1, kondisi;
 if (jomblo == 1) {
     console.log("saya Jomblo");
     console.log("saya tidak akan malam mingguan");
-    result = "malming"
+    kondisi = "malming"
     
-    if (kondisi = "malming") {
+    if (kondisi == "malming") {
         console.log("maka saya nonton netflix");
     }
 } else if (jomblo == 0) {
