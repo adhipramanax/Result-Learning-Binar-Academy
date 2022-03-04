@@ -119,23 +119,23 @@ console.log(objectV);// {nama: "John", umur: 20}
 // expected output: ganjil negatif, genap positif, ganjil positif, genap negatif
 
 
-let varA = -101;
-let varB = varA;
+let varAa = -101;
+let varBa = varA;
 
-if (varA > -1000 && varA < 1000) {
-    if (varA === 0) {
+if (varAa > -1000 && varAa < 1000) {
+    if (varAa === 0) {
         console.log('tidak boleh 0');
-    }else if (varA % 2 === 0) {
-        if (varA > 0) {
-            console.log('positif genap');
+    }else if (varAa % 2 === 0) {
+        if (varAa > 0) {
+            console.log("nilai : " + varBa + " genap positif");
         }else if (varA < 0) {
-            console.log('negatif genap');
+            console.log("nilai : " + varB + " genap negatif");
         }
     }else{
         if (varA > 0) {
-            console.log('positif ganjil');
-        }else if (varA < 0) {
-            console.log('negatif ganjil');
+            console.log('nilai : ' + varBa + " ganjil positif");
+        }else if (varAa < 0) {
+            console.log('nilai : ' + varBa + " ganjil negatif");
         }
     }
 }else{
