@@ -25,24 +25,22 @@
 // console.log("jumlah ganjil " +jumlah_ganjil);
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////
+let arayNumberData = [12,10,3,22,10,5, 20]
+function printAray(arayNumberData) {
+    let habis = 0;
+    let tidak_habis = 0;
+    for (let index = 0; index < arayNumberData.length; index++) {
+          if (arayNumberData[index] % 5 === 0) {
+            habis++;
+        }else{
+            tidak_habis++;
+        }
+    }
+    return {habis,tidak_habis};
+}
+console.log(printAray(arayNumberData));
 
-
-// let arayNumberData = [12,10,3,22,10,5, 20]
-// function printAray(arayNumberData) {
-//     let habis = 0;
-//     let tidak_habis = 0;
-//     for (let index = 0; index < arayNumberData.length; index++) {
-//           if (arayNumberData[index] % 5 === 0) {
-//             habis++;
-//         }else{
-//             tidak_habis++;
-//         }
-//     }
-//     return {habis,tidak_habis};
-// }
-// console.log(printAray(arayNumberData));
-
-
+// /////////////////////////////////////////////////////////////////////////////////////////////////
 function printArray(array_number) {
     for (let index = 0; index < array_number.length; index++) {
         console.log(array_number[index]);
