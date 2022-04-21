@@ -1,0 +1,30 @@
+.add-car{
+    width: 100%;
+    height: 260px;
+    background-color: #fff;
+    margin-left: 12px;
+}
+
+
+.form-add-car{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    /* padding-top: 20px; */
+}
+
+
+.btn-buttom{
+    position: absolute;
+    bottom: 20px;
+}
+
+.area-cars{
+    position: relative;
+    height: 100vh;
+}
+.form-grub{
+    padding-top: 10px;
+}

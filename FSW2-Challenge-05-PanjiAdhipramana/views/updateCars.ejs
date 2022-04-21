@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- meta -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Panji Adhipramana" />
+
+    <!-- title -->
+    <title>Challenge 5</title>
+
+    <!-- Font awasome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c58b7f284.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/addCars.css" />
+  </head>
+  <body>
+    <!-- <div> -->
+    <div class="row left-nav">
+      <!-- left navbar -->
+      <div class="col-3">
+        <div class="row">
+          <div class="col-4 menu-nav">
+            <div style="height: 70px; padding: 20px">
+              <div class="icon-1">&nbsp;</div>
+            </div>
+            <div class="left-nav-icon">
+              <button>
+                <i class="fa-solid fa-house"></i>
+                <p>Dashboard</p>
+              </button>
+              <button style="background-color: rgba(255, 255, 255, 0.432)">
+                <i class="fa-solid fa-car"></i>
+                <p>Menu Cars</p>
+              </button>
+            </div>
+          </div>
+          <div class="col-8 list-nav">
+            <div style="height: 70px; padding: 20px">
+              <div class="icon-1">&nbsp;</div>
+            </div>
+            <div class="list-nav-menu">
+              <button>Cars</button>
+              <button style="background-color: #cfd4ed">List Car</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end left navbar -->
+
+      <div class="col-9 area-cars">
+        <!-- top navbar -->
+        <div class="col-12 nav-top">
+          <div class="nav-top-1">
+            <img src="/images/ham-icon.png" alt="" />
+          </div>
+          <div class="nav-top" style="display: flex; flex-direction: row">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <div class="icon-3"><h3>U</h3></div>
+            <p>Unis Badri</p>
+            <div class="nav-top-2">
+              <img src="/images/Vector.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- end top navbar -->
+
+        <!--header card cars -->
+        <div class="area-card-cars">
+          <div class="row row-card">
+            <p><strong>Cars</strong> > <strong>List Cars </strong>  > Update Car Information</p>
+            <div class="list-car">
+              <h2>Update Car Information</h2>
+              <!-- <button class="btn-new-car">
+                <i class="dsa fa-solid fa-plus"> Add New Car</i>
+              </button> -->
+            </div>
+
+            <!-- card cars -->
+            <div class="add-car">
+                <form>
+                    <div class="form-group row form-grub">
+                      <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Nama</label>
+                      <div class="col-sm-9">
+                        <input type="nama" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Avanza">
+                      </div>
+                    </div>
+                    <div class="form-group row form-grub">
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Sewa Per Hari</label>
+                        <div class="col-sm-9">
+                          <input type="sewa" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rp. 0,-">
+                        </div>
+                      </div>
+                      <div class="form-group row form-grub" >
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg" style="height: 100%;">Ukuran</label>
+                        <div class="col-sm-9">
+                            <select
+                            onfocusin="dimBackground()"
+                            onfocusout="unDimBackground()"
+                            name="cars"
+                            id="tipe-driver"
+                            class=" form-control form-control-lg"
+                            
+                            >
+                            <!-- form-select -->
+                            <option value="" selected>Ukuran</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group row form-grub">
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Foto</label>
+                        <div class="col-sm-9">
+                            <input
+                            class="form-control form-control-lg "
+                            type="file"
+                            id="formFile"
+                        />
+                        </div>
+                        </div>
+                  </form>
+            
+            <!-- end card cars -->
+          </div>
+        </div>
+        <div class="btn-buttom">
+          <a href="/">
+            <button type="button" class="btn btn-outline-primary">Cancel</button>
+          </a>
+            <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+    <!-- end card cars -->
+
+    <!-- javascript boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
