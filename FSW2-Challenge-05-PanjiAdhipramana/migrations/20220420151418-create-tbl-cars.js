@@ -14,6 +14,20 @@ module.exports = {
       harga: {
         type: Sequelize.INTEGER
       },
+      id_image: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'tbl_images',
+          key: 'id'
+        }
+      },
+      id_size: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'tbl_sizes',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

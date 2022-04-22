@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name_size: {
-        type: Sequelize.STRING
-      },
       url_image: {
         type: Sequelize.STRING
       },

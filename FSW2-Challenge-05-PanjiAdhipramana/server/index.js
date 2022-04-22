@@ -1,48 +1,35 @@
-// import express JS
 const express = require('express');
 const ejs = require('ejs');
+const cors = require('cors');
+
+// define Object Express
 const app = express();
 
+//import router
+const webRouter = require('./../routes/web.router');
+const apiRouter = require('./../routes/api.router');
+
+// Activate CORS
+app.use(cors());
+
+// use Express JSON
 app.use(express.json());
+
+// use Express URL Encoded
 app.use(express.urlencoded());
-
-const PORT = 8070;
-
 app.use(express.static('public'));
 
-// route
-app.get('/', (req, res) => {
-    ejs.renderFile('./views/index.ejs', {nama:"panji"}, (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(data);
-        }
-    });
-});
+// Set EJS
+app.set('view engine', 'ejs');
 
-app.get('/addCars', (req, res) => {
-    ejs.renderFile('./views/addCars.ejs', {}, (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(data);
-        }
-    });
-});
+// define port
+const PORT = 8081;
 
-app.get('/updateCars', (req, res) => {
-    ejs.renderFile('./views/updateCars.ejs', {}, (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(data);
-        }
-    });
-});
+// define route
+app.use('/', webRouter)
+app.use('/api', apiRouter)
 
-
-
+// define server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-}); 
+});

@@ -10,10 +10,25 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.belongsTo(models.tbl_image, {
+        targetKey: 'id',
+        foreignKey: 'id_image',
+        as: 'image'
+      })
+
+      this.belongsTo(models.tbl_size,{
+        targetKey: 'id',
+        foreignKey: 'id_size',
+        as: 'size'
+      })
     }
   }
   tbl_cars.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     name: DataTypes.STRING,
     harga: DataTypes.INTEGER
   }, {

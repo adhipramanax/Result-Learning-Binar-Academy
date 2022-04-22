@@ -10,11 +10,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasOne(models.tbl_cars, {
+        sourceKey: 'id',
+        foreignKey: 'id_image',
+        as: 'cars'
+      })
     }
   }
   tbl_image.init({
-    name_size: DataTypes.STRING,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     url_image: DataTypes.STRING
   }, {
     sequelize,

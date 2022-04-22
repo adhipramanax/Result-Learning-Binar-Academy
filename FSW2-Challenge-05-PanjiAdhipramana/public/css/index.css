@@ -1,0 +1,233 @@
+/* Global Style */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+p, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/* navigasi */
+.navigasi{
+    background-color: red;
+    height: 70px;
+    /* width: 100%; */
+}
+
+/* left Navbar */
+.left-nav{
+    padding: 0;
+    margin: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 25%;
+}
+
+.menu-nav{
+    background-color: #0D28A6;
+    padding: 0;
+}
+
+.list-nav{
+    background-color: #fff;
+    height: 100vh;
+    padding: 0;
+}
+
+.icon-1{
+    background-color: #CFD4ED;
+    align-items: center;
+    height: 100%;
+}
+.left-nav-icon img{
+    width: 100%;
+}
+
+.list-nav-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.left-nav-icon button{
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    /* filter: blur(4px); */
+}
+
+.left-nav-icon p{
+    font-size: 15px;
+}
+
+.list-nav .list-nav-menu button{
+    padding-left: 10px;
+}
+
+
+/* nav top */
+.nav-top{
+    height: 70px;
+    /* width: 100%; */
+    /* position: fixed; */
+    background-color: #fff;
+    /* align-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+}
+
+.nav-top p {
+    margin-left: 15px;
+    padding: 0;
+    font-size: 20px;
+    /* font-weight: bold; */
+    
+}
+.nav-top-1 img{
+    height: 40px;
+    margin-left: 20px;
+}
+.nav-top-2 img{
+    height: 10px;
+    margin-left: 10px;
+}
+.nav-search{
+    /* width: 50%; */
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+.icon-3{
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: #CFD4ED;
+    border-radius: 40px;
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    font-size: 20pt;
+    
+}
+/* header card cars */
+.area-card-cars{
+    padding: 80px 20px 20px 10px;
+    margin: 0;
+    display: flex;
+    right: 0;
+    
+}
+
+
+
+.row-card{
+    padding: 0;
+    margin: 0;
+}
+.list-car{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-new-car{
+    width: 140px;
+    padding: 0;
+    height: 100%;
+    background-color: #0D28A6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-filter button{
+    /* width: 100%; */
+    border: 1px solid #0D28A6;
+    background-color: #fff;
+    color: #0D28A6;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+/* end header card cars */
+
+/* list card */
+.area-cars{
+    padding: 0;
+}
+
+.card-cars{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.card-tampil-mobil button{
+    height: 50px;
+}
+.card-cars img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.btn-green{
+    background-color: #00a65a;
+    color: #fff;
+}   
+
+.col-card{
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.list-nav-menu button{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 20pt;
+    text-align: left;
+}
+
+.btn-form{
+    width: 49%;
+}
+
+.card-img-top img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
