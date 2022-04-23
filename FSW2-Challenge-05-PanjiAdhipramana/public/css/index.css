@@ -231,3 +231,6 @@ body{
     object-fit: cover;
 }
 
+.modal-sukses{
+    z-index: 100;
+}

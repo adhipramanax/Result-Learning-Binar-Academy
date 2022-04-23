@@ -1,6 +1,7 @@
 const express = require('express');
 const ejs = require('ejs');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
 
 // define Object Express
 const app = express();
@@ -11,6 +12,9 @@ const apiRouter = require('./../routes/api.router');
 
 // Activate CORS
 app.use(cors());
+
+// Handle File Upload
+app.use(fileUpload());
 
 // use Express JSON
 app.use(express.json());

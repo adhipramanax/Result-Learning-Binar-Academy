@@ -110,17 +110,17 @@
 
             <!-- card cars -->
             <div class="add-car">
-                <form>
+                <form action="/create" method="post" enctype="multipart/form-data">
                     <div class="form-group row form-grub">
                       <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Nama</label>
                       <div class="col-sm-9">
-                        <input type="nama" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Avanza">
+                        <input name="name" type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Avanza">
                       </div>
                     </div>
                     <div class="form-group row form-grub">
                         <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Sewa Per Hari</label>
                         <div class="col-sm-9">
-                          <input type="sewa" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rp. 0,-">
+                          <input name="harga" type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rp. 0,-">
                         </div>
                       </div>
                       <div class="form-group row form-grub" >
@@ -129,16 +129,16 @@
                             <select
                             onfocusin="dimBackground()"
                             onfocusout="unDimBackground()"
-                            name="cars"
+                            name="ukuran"
                             id="tipe-driver"
                             class=" form-control form-control-lg"
                             
                             >
                             <!-- form-select -->
                             <option value="" selected>Ukuran</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
                             </select>
                         </div>
                       </div>
@@ -148,11 +148,12 @@
                             <input
                             class="form-control form-control-lg "
                             type="file"
+                            name="url_image"
                             id="formFile"
                         />
                         </div>
                         </div>
-                  </form>
+                  
             <!-- end card cars -->
           </div>
         </div>
@@ -160,8 +161,10 @@
           <a href="/">
             <button type="button" class="btn btn-outline-primary">Cancel</button>
           </a>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
+      </form>
+      <!--  -->
       </div>
     </div>
     <!-- end card cars -->

@@ -1,13 +1,13 @@
 const express = require('express');
-const { index } = require('../controllers/web/index.controller');
-const { create } = require('../controllers/web/create.controller');
+const { index, deleteCar } = require('../controllers/web/index.controller');
+const { create, handleCreateForm } = require('../controllers/web/create.controller');
 const { update } = require('../controllers/web/update.controller');
 const router = express.Router();
 
 router.get('/', index);
-
 router.get('/create', create);
-
-router.get('/update', update);
+router.get('/update/:id', update);
+router.post('/create', handleCreateForm);
+router.post('/delete/:id', deleteCar);
 
 module.exports = router;
