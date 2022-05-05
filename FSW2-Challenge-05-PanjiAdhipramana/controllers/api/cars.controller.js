@@ -1,4 +1,4 @@
-const Model = require('../../models');
+const Model = require("../../models");
 const Car = Model.tbl_cars;
 
 // const getAllCars = async (req, res) => {
@@ -11,12 +11,27 @@ const Car = Model.tbl_cars;
 // }
 
 function getAllCars(req, res) {
-  Car.findAll()
-    .then(function (cars) {
-      res.json(cars);
-    }).catch(function (err) {
-      res.json(err);
-    });
+  if (req.query.sort) {
+    Car.findAll({
+      where: {
+        id_size: req.query.sort,
+      },
+    })
+      .then(function (cars) {
+        res.json(cars);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  } else {
+    Car.findAll()
+      .then(function (cars) {
+        res.json(cars);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  }
 }
 
 function newCars(req, res) {
@@ -28,66 +43,68 @@ function newCars(req, res) {
       harga: carReq.harga,
       url_image: carReq.url_image,
       id_size: carReq.id_size,
-      createdAt:new Date(),
-      updatedAt:new Date()
-    }
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
 
-    Car.create(car).then((data) => {
-      res.status(200).json({
-        message: 'Success',
-        data: car
-    })
-    }).catch((error) => {
-        console.log(error);
+    Car.create(car)
+      .then((data) => {
+        res.status(200).json({
+          message: "Success",
+          data: car,
+        });
       })
-    } catch (error) {
-      console.log(error);
-    }
-} 
+      .catch((error) => {
+        console.log(error);
+      });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 async function showCar(req, res) {
   try {
     let id = req.params.id;
     let car = await Car.findOne({
       where: {
-        id: id
-      }
+        id: id,
+      },
     });
     res.status(200).json({
-      message: 'Success',
-      data: car
-    })
+      message: "Success",
+      data: car,
+    });
   } catch (error) {
     console.log(error);
   }
 }
 
-function updateCars(req, res ) {
-    try {
-      let carReq = req.body;
-      let id = req.params.id;
+function updateCars(req, res) {
+  try {
+    let carReq = req.body;
+    let id = req.params.id;
 
-      let car = {
-        name: carReq.name,
-        harga: carReq.harga,
-        url_image: carReq.url_image,
-        id_size: carReq.id_size,
-        createdAt:new Date(),
-        updatedAt:new Date()
-    }
+    let car = {
+      name: carReq.name,
+      harga: carReq.harga,
+      url_image: carReq.url_image,
+      id_size: carReq.id_size,
+      updatedAt: new Date(),
+    };
 
-    Car.update(car, {where: {id: id}}).then((data) => {
-      res.status(200).json({
-        message: 'Success',
-        data: car
-    })
-    }).catch((error) => {
+    Car.update(car, { where: { id: id } })
+      .then((data) => {
+        res.status(200).json({
+          message: "Success",
+          data: car,
+        });
+      })
+      .catch((error) => {
         console.log(error);
-    })
+      });
   } catch (error) {
     console.log(error);
   }
-
 }
 
 function deleteCars(req, res) {
@@ -95,21 +112,22 @@ function deleteCars(req, res) {
     let id = req.params.id;
     Car.destroy({
       where: {
-        id: id
-      }
-    }).then((data) => {
-      res.status(200).json({
-        message: 'Success',
-        data: data
+        id: id,
+      },
     })
-    }).catch((error) => {
-        console.log(error);
+      .then((data) => {
+        res.status(200).json({
+          message: "Success",
+          data: data,
+        });
       })
+      .catch((error) => {
+        console.log(error);
+      });
   } catch (error) {
     console.log(error);
   }
 }
-
 
 // One to one ada dua normalisasi
 // 1. Normalisasi dengan menjadikannya kolom (atribut) (properti)
@@ -140,9 +158,9 @@ function deleteCars(req, res) {
 // 3. Bikin tabel mobil_warna dengan foreign key mobil_id dan warna_id
 
 module.exports = {
-    getAllCars,
-    newCars,
-    showCar,
-    updateCars,
-    deleteCars
-}
+  getAllCars,
+  newCars,
+  showCar,
+  updateCars,
+  deleteCars,
+};

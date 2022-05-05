@@ -79,7 +79,9 @@
             </div>
             <div class="list-nav-menu">
               <button>Cars</button>
-              <button style="background-color: #cfd4ed">List Cars</button>
+              <a href="/">
+                <button style="background-color: #cfd4ed">List Cars</button>
+              </a>
             </div>
           </div>
         </div>
@@ -89,10 +91,10 @@
 
       <div class="col-9 area-cars">
         <!-- top navbar -->
-        <div class="col-12 nav-top">
-          <!-- <div class="nav-top-1">
+        <div class="col-9 nav-top asdfg ">
+          <div class="nav-top-1">
             <img src="/images/ham-icon.png" alt="" />
-          </div> -->
+          </div>
           <div class="nav-top" style="display: flex; flex-direction: row">
             <form class="d-flex">
               <input
@@ -117,30 +119,29 @@
         <!--header card cars -->
         <div class="area-card-cars">
           <div class="row row-card">
-            <p><strong>Cars</strong> >  List Cars</p>
+            <a style="color: black;" href="/"><strong>Cars</strong> >  List Cars</a>
             <div class="list-car">
-              <h2>List Cars</h2>
+
+                <h2>List Cars</h2>
               <a href="/create" class="btn-new-car">
                 <button class="btn-new-car">
                   <i class="dsa fa-solid fa-plus"> Add New Car</i>
                 </button>
               </a>
             </div>
-            <div class="btn-filter disabled">
-              <a href="">
+            <div class="btn-filter">
+              <a href="/">
                 <button>All</button>
               </a>
-              <a href="" >
+              <a href="/?sort=1" >
                 <button>Small</button>
               </a>
-              <a href="" >
+              <a href="/?sort=2" >
                 <button>Medium</button>
               </a>
-              <a href="" >
+              <a href="/?sort=3" >
                 <button>Large</button>
               </a>
-              
-            
             </div>
 
             <!-- card cars -->
@@ -157,28 +158,78 @@
                   </div>
                   <div class="card-body card-des">
                     <h3 class="car-title"><%= car.name %></h3>
-                    <h4 class="car-price" style="font-weight: bold"><%= car.harga %>/Hari</h4>
+                    <h4 class="car-price" style="font-weight: bold">Rp.<%= car.harga %>/Hari</h4>
                     <p>
                       <i class="fa-solid fa-clock-rotate-left"></i> Updated at 4
                       Apr 2022, 09.00
                     </p>
                     <br />
-                    <div class="btn-row">
-                      <form action="/delete/<%= car.id %>" method="post">
-                        <button
-                          type="submit"
-                          class="btn btn-outline-danger btn-form"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                          Delete
-                        </button>
-                      </form>
-                      <a href="/update/<%= car.id %>">
-                        <button type="button" class="btn btn-green btn-form">
-                          <i class="fa-solid fa-pen-to-square"></i>
-                          Edit
-                        </button>
-                      </a>
+                    <!-- btn edit delete -->
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="modalDelete<%= car.id %>"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content modal-item">
+                          <div class="modal-body d-flex isi-modal">
+                            <img style="width: 250px" src="/images/img-BeepBeep.png" alt="mobil" />
+                            <h2>Menghapus Data Mobil</h2>
+                            <p>
+                              Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin
+                              menghapus?
+                            </p>
+                          </div>
+                          <div class="modal-footer modal-fot">
+                            <form action="/delete/<%= car.id %>" method="post">
+                              <button type="submit" class="btn btn-primary btn-lg" >Ya</button>
+                            </form>
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary btn-lg"
+                              data-bs-dismiss="modal"
+                            >
+                              Tidak
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end btn edit -->
+                    <div class="btn-row row">
+                      <div class="col-6">
+                          <button
+                            type="button"
+                            class="btn btn-outline-danger btn-form btn-lg"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDelete<%= car.id %>"
+                          >
+                            <i class="fa-solid fa-trash"></i>
+                            Delete
+                          </button>
+                      </div>
+                      <!-- <div class="col-6">
+                        <form action="/delete/<%= car.id %>" method="post">
+                          <button
+                            type="submit"
+                            class="btn btn-outline-danger btn-form btn-lg"
+                          >
+                            <i class="fa-solid fa-trash"></i>
+                            Delete
+                          </button>
+                        </form>
+                      </div> -->
+                      <div class="col-6">
+
+                        <a href="/update/<%= car.id %>">
+                          <button type="button" class="btn btn-green btn-form btn-lg">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Edit
+                          </button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

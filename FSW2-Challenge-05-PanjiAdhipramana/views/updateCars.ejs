@@ -107,82 +107,68 @@
                 <i class="dsa fa-solid fa-plus"> Add New Car</i>
               </button> -->
             </div>
+<!-- card cars -->
+<div class="add-car">
+  <form action="/update/<%= id %>" method="post" enctype="multipart/form-data">
+      <div class="form-group row form-grub">
+        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Nama</label>
+        <div class="col-sm-9">
+          <input name="name" value="<%= name %>" type="nama" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Avanza">
+        </div>
+      </div>
 
-            <!-- card cars -->
-            <div class="add-car">
-                <form>
-                    <div class="form-group row form-grub">
-                      <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Nama</label>
-                      <div class="col-sm-9">
-                        <input name="name" value="<%= name %>" type="nama" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Avanza">
-                      </div>
-                    </div>
-                    <div class="form-group row form-grub">
-                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Sewa Per Hari</label>
-                        <div class="col-sm-9">
-                          <input name="harga" value="<%= harga %>" type="sewa" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rp. 0,-">
-                        </div>
-                      </div>
-                      <div class="form-group row form-grub" >
-                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg" style="height: 100%;">Ukuran</label>
-                        <div class="col-sm-9">
-                            <select
-                            onfocusin="dimBackground()"
-                            onfocusout="unDimBackground()"
-                            name="ukuran"
-                            id="tipe-driver"
-                            class=" form-control form-control-lg"
-                            >
-                            <!-- form-select -->
-                            <option value="">Ukuran</option>
-                            <option value="1" <%= id_size == 1 ? "selected" : "" %> >Small</option>
-                            <option value="2" <%= id_size == 2 ? "selected" : "" %> >Medium</option>
-                            <option value="3" <%= id_size == 3 ? "selected" : "" %> >Large</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class="form-group row form-grub">
-                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Foto</label>
-                        <div class="col-sm-9">
-                            <input
-                            class="form-control form-control-lg "
-                            type="file"
-                            name="url_image"
-                            id="formFile"
-                        />
-                        </div>
-                        </div>
-                  </form>
-            
-            <!-- end card cars -->
+      <div class="form-group row form-grub">
+        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Sewa Per Hari</label>
+        <div class="col-sm-9">
+          <input name="harga" value="<%= harga %>" type="sewa" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rp. 0,-">
+        </div>
+      </div>
+
+      <div class="form-group row form-grub" >
+        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg" style="height: 100%;">Ukuran</label>
+        <div class="col-sm-9">
+          <select
+          onfocusin="dimBackground()"
+          onfocusout="unDimBackground()"
+          name="ukuran"
+          id="tipe-driver"
+          class=" form-control form-control-lg"
+          >
+          <option value="">Ukuran</option>
+          <option value="1" <%= id_size == 1 ? "selected" : "" %> >Small</option>
+          <option value="2" <%= id_size == 2 ? "selected" : "" %> >Medium</option>
+          <option value="3" <%= id_size == 3 ? "selected" : "" %> >Large</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row form-grub">
+        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Foto</label>
+        <div class="col-sm-9">
+            <input
+            class="form-control form-control-lg"
+            type="file"
+            name="url_image"
+            id="formFile"/>
+        </div>
+      </div>
+
+      <div class="btn-buttom">
+      <a href="/">
+        <button type="button" class="btn btn-outline-primary">Cancel</button>
+      </a>
+        <button type="submit" class="btn btn-primary">
+          Save
+        </button>  
+      </div>
+        
+  </form>
+</div>
+<!-- end card cars -->
+            </div>
           </div>
         </div>
-        <div class="btn-buttom">
-          <a href="/">
-            <button type="button" class="btn btn-outline-primary">Cancel</button>
-          </a>
-          <!--  -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Save
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        ...
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-        <button type="submit" class="btn btn-primary">Ya</button>
-      </div>
-    </div>
-  </div>
-</div>
-          <!--  -->
-        </div>
       </div>
     </div>
     <!-- end card cars -->
