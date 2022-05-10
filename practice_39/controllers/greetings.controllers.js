@@ -23,19 +23,46 @@ function createGreetings(req, res) {
   });
 }
 
-// get all greetings
-function getAllGreetings(req, res) {
-  Greeting.find({ id_invitation: req.params.id }, function (err, greetings) {
-    if (err) {
-      res.status(500).send(err);
+//get all greeting
+async function getAllGreetings(req, res) {
+  try {
+    let getAllGreeting = await tbl_gallery.findAll({
+      where: {
+        id: req.query.sort,
+      },
+    });
+
+    if (!greetings) {
+      res.status(404).json({
+        message: "Greetings not found",
+      });
     } else {
-      res.json(greetings);
+      res.status(200).json({
+        message: "Success",
+        data: getAllGreeting,
+      });
     }
-  });
-  res.status(200).json({
-    message: "Success",
-  });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error",
+      data: error,
+    });
+  }
 }
+
+// get all greetings
+// function getAllGreetings(req, res) {
+//   Greeting.find({ id_invitation: req.params.id }, function (err, greetings) {
+//     if (err) {
+//       res.status(500).send(err);
+//     } else {
+//       res.json(greetings);
+//     }
+//   });
+//   res.status(200).json({
+//     message: "Success",
+//   });
+// }
 
 /**
  * response Code success 201

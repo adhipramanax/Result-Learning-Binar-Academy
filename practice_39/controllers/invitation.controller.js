@@ -59,9 +59,12 @@ async function getAllInvitations(req, res) {
 async function createInvitation(req, res) {
   try {
     let createInvitation = await tbl_invitation.create({
-      id_user: req.body.id_user,
-      title: req.body.title,
-      description: req.body.description,
+      name: req.body.name,
+      place: req.body.place,
+      is_read: req.body.is_read,
+      email: req.body.email,
+      contact: req.body.contact,
+      is_atterdance: req.body.is_atterdance,
       createdAt: new Date(),
       updatedAt: new Date(),
     });
@@ -89,8 +92,12 @@ async function updateInvitation(req, res) {
   try {
     let updateInvitation = await tbl_invitation.update(
       {
-        title: req.body.title,
-        description: req.body.description,
+        name: req.body.name,
+        place: req.body.place,
+        is_read: req.body.is_read,
+        email: req.body.email,
+        contact: req.body.contact,
+        is_atterdance: req.body.is_atterdance,
         updatedAt: new Date(),
       },
       {

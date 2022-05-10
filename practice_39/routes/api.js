@@ -21,6 +21,14 @@ const {
   deleteGallery,
 } = require("../controllers/gallery.controllers");
 
+const {
+  createUser,
+  updateUser,
+  deleteUser,
+  getUser,
+  getAllUsers,
+} = require("../controllers/user.controllers");
+
 // create greetings
 router.post("/v1/greethings", createGreetings);
 // get all greetings
@@ -45,5 +53,16 @@ router.post("/v1/galleries", addGallery);
 router.put("/v1/galleries/:id", updateGallery);
 // Delete gallery
 router.delete("/v1/galleries/:id", deleteGallery);
+
+// get user by id
+router.get("/v1/users/:id", getUser);
+// get all users
+router.get("/v1/users", getAllUsers);
+// create user
+router.post("/v1/users", createUser);
+// update user
+router.put("/v1/users/:id", updateUser);
+// delete user
+router.delete("/v1/users/:id", deleteUser);
 
 module.exports = router;
